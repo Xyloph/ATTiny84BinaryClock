@@ -11,6 +11,7 @@ Here's a quick video of the final product: https://www.youtube.com/watch?v=mD4Hj
 - 6x 2N2222A PNP Transistors
 - 5V Power Supply
 - Bunch of wires
+- 20 blue LEDs
 - A perfboard big enough to fit everything but small enough to fit in the enclosure.
 - A plastic box.
 - 6x 1k Ω resistors for the transistors (larger values can be used).
@@ -21,3 +22,6 @@ Here's a quick video of the final product: https://www.youtube.com/watch?v=mD4Hj
 
 Using the real time clock is kinda painful with the ATTiny84 because that microcontroller does not support the I2C protocol. Because of this, I've used the I2CMaster v2 which can be found here: https://forums.adafruit.com/viewtopic.php?f=25&t=13722&start=0 . I modified it to remove support for the real I2C implementation which did not compile if the board was set to ATTiny.
 
+Make sure you verify your pin numbers in the code, I changed them at some point because my schematic was initially wrong. The pen and paper version is the most accurate of the final result.
+
+I also used the Time library found on Arduino.cc. It is useful because it provides a cache of the time, so it doesn't have to be retrieved off the RTC every loop.
