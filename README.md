@@ -4,6 +4,8 @@ This project's goal is to create a binary clock using an ATTiny84 along with a D
 
 Here's a quick video of the final product: https://www.youtube.com/watch?v=mD4HjlXqTbA
 
+Disclaimer: I'm awful at determining the proper location of stuff on a board :)
+
 ## Parts
 
 - ATTiny84
