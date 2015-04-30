@@ -2,6 +2,22 @@
 
 This project's goal is to create a binary clock using an ATTiny84 along with a DS1307 RTC.
 
-This repository will contain everything created along the way, including code, design files and pictures.
+Here's a quick video of the final product: https://www.youtube.com/watch?v=mD4HjlXqTbA
 
-The clock's enclosure is 6 inches by 3 1/2 inches.
+## Parts
+
+- ATTiny84
+- 74HC595N 8-bit Shift Register
+- 6x 2N2222A PNP Transistors
+- 5V Power Supply
+- Bunch of wires
+- A perfboard big enough to fit everything but small enough to fit in the enclosure.
+- A plastic box.
+- 6x 1k Ω resistors for the transistors (larger values can be used).
+- 4x 220 Ω resistors to limit the power provided to a LED.
+- DS1307 Real Time Clock kit (I bought one from Adafruit).
+
+## Things to know
+
+Using the real time clock is kinda painful with the ATTiny84 because that microcontroller does not support the I2C protocol. Because of this, I've used the I2CMaster v2 which can be found here: https://forums.adafruit.com/viewtopic.php?f=25&t=13722&start=0 . I modified it to remove support for the real I2C implementation which did not compile if the board was set to ATTiny.
+
